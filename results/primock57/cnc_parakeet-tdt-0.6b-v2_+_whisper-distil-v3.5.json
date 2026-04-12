@@ -1,0 +1,11 @@
+{
+  "models": [
+    "parakeet-tdt-0.6b-v2",
+    "whisper-distil-v3.5"
+  ],
+  "dataset": "primock57",
+  "n_files": 57,
+  "aggregate_pivot_wer_pct": 13.76,
+  "aggregate_cnc_wer_pct": 22.65,
+  "delta_pp": 8.89
+}

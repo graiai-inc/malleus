@@ -1,0 +1,1395 @@
+{
+  "model1": "parakeet-tdt-0.6b-v2",
+  "model2": "whisper-distil-v3.5",
+  "dataset": "primock57",
+  "aggregate_wer": {
+    "oracle": 9.07,
+    "naive": 21.33,
+    "confidence": 21.46,
+    "entropy": 21.44,
+    "m1_only": 13.76,
+    "m2_only": 15.27
+  },
+  "per_file": {
+    "oracle": [
+      {
+        "file_id": "day1_consultation01",
+        "wer": 0.0988
+      },
+      {
+        "file_id": "day1_consultation02",
+        "wer": 0.1041
+      },
+      {
+        "file_id": "day1_consultation03",
+        "wer": 0.0974
+      },
+      {
+        "file_id": "day1_consultation04",
+        "wer": 0.1024
+      },
+      {
+        "file_id": "day1_consultation05",
+        "wer": 0.0931
+      },
+      {
+        "file_id": "day1_consultation06",
+        "wer": 0.1251
+      },
+      {
+        "file_id": "day1_consultation07",
+        "wer": 0.1323
+      },
+      {
+        "file_id": "day1_consultation08",
+        "wer": 0.1118
+      },
+      {
+        "file_id": "day1_consultation09",
+        "wer": 0.1138
+      },
+      {
+        "file_id": "day1_consultation10",
+        "wer": 0.1228
+      },
+      {
+        "file_id": "day1_consultation11",
+        "wer": 0.0907
+      },
+      {
+        "file_id": "day1_consultation12",
+        "wer": 0.0942
+      },
+      {
+        "file_id": "day1_consultation13",
+        "wer": 0.0652
+      },
+      {
+        "file_id": "day1_consultation14",
+        "wer": 0.1126
+      },
+      {
+        "file_id": "day1_consultation15",
+        "wer": 0.0935
+      },
+      {
+        "file_id": "day2_consultation01",
+        "wer": 0.0868
+      },
+      {
+        "file_id": "day2_consultation02",
+        "wer": 0.0979
+      },
+      {
+        "file_id": "day2_consultation03",
+        "wer": 0.1117
+      },
+      {
+        "file_id": "day2_consultation04",
+        "wer": 0.097
+      },
+      {
+        "file_id": "day2_consultation05",
+        "wer": 0.0678
+      },
+      {
+        "file_id": "day2_consultation06",
+        "wer": 0.096
+      },
+      {
+        "file_id": "day2_consultation07",
+        "wer": 0.1162
+      },
+      {
+        "file_id": "day2_consultation08",
+        "wer": 0.0869
+      },
+      {
+        "file_id": "day2_consultation09",
+        "wer": 0.1034
+      },
+      {
+        "file_id": "day2_consultation10",
+        "wer": 0.0754
+      },
+      {
+        "file_id": "day3_consultation01",
+        "wer": 0.1049
+      },
+      {
+        "file_id": "day3_consultation02",
+        "wer": 0.0783
+      },
+      {
+        "file_id": "day3_consultation03",
+        "wer": 0.0985
+      },
+      {
+        "file_id": "day3_consultation04",
+        "wer": 0.1088
+      },
+      {
+        "file_id": "day3_consultation05",
+        "wer": 0.0821
+      },
+      {
+        "file_id": "day3_consultation06",
+        "wer": 0.0777
+      },
+      {
+        "file_id": "day3_consultation07",
+        "wer": 0.1054
+      },
+      {
+        "file_id": "day3_consultation08",
+        "wer": 0.1057
+      },
+      {
+        "file_id": "day3_consultation09",
+        "wer": 0.0545
+      },
+      {
+        "file_id": "day3_consultation10",
+        "wer": 0.062
+      },
+      {
+        "file_id": "day4_consultation01",
+        "wer": 0.0824
+      },
+      {
+        "file_id": "day4_consultation02",
+        "wer": 0.0643
+      },
+      {
+        "file_id": "day4_consultation03",
+        "wer": 0.0704
+      },
+      {
+        "file_id": "day4_consultation04",
+        "wer": 0.0659
+      },
+      {
+        "file_id": "day4_consultation05",
+        "wer": 0.1074
+      },
+      {
+        "file_id": "day4_consultation06",
+        "wer": 0.0848
+      },
+      {
+        "file_id": "day4_consultation07",
+        "wer": 0.0825
+      },
+      {
+        "file_id": "day4_consultation08",
+        "wer": 0.0905
+      },
+      {
+        "file_id": "day4_consultation09",
+        "wer": 0.1042
+      },
+      {
+        "file_id": "day4_consultation10",
+        "wer": 0.0719
+      },
+      {
+        "file_id": "day5_consultation01",
+        "wer": 0.0781
+      },
+      {
+        "file_id": "day5_consultation02",
+        "wer": 0.0702
+      },
+      {
+        "file_id": "day5_consultation03",
+        "wer": 0.0607
+      },
+      {
+        "file_id": "day5_consultation04",
+        "wer": 0.1261
+      },
+      {
+        "file_id": "day5_consultation05",
+        "wer": 0.091
+      },
+      {
+        "file_id": "day5_consultation06",
+        "wer": 0.0849
+      },
+      {
+        "file_id": "day5_consultation07",
+        "wer": 0.0802
+      },
+      {
+        "file_id": "day5_consultation08",
+        "wer": 0.0582
+      },
+      {
+        "file_id": "day5_consultation09",
+        "wer": 0.0777
+      },
+      {
+        "file_id": "day5_consultation10",
+        "wer": 0.0778
+      },
+      {
+        "file_id": "day5_consultation11",
+        "wer": 0.0615
+      },
+      {
+        "file_id": "day5_consultation12",
+        "wer": 0.0686
+      }
+    ],
+    "naive": [
+      {
+        "file_id": "day1_consultation01",
+        "wer": 0.1982
+      },
+      {
+        "file_id": "day1_consultation02",
+        "wer": 0.2937
+      },
+      {
+        "file_id": "day1_consultation03",
+        "wer": 0.2197
+      },
+      {
+        "file_id": "day1_consultation04",
+        "wer": 0.2574
+      },
+      {
+        "file_id": "day1_consultation05",
+        "wer": 0.2316
+      },
+      {
+        "file_id": "day1_consultation06",
+        "wer": 0.2534
+      },
+      {
+        "file_id": "day1_consultation07",
+        "wer": 0.2914
+      },
+      {
+        "file_id": "day1_consultation08",
+        "wer": 0.2184
+      },
+      {
+        "file_id": "day1_consultation09",
+        "wer": 0.2262
+      },
+      {
+        "file_id": "day1_consultation10",
+        "wer": 0.2575
+      },
+      {
+        "file_id": "day1_consultation11",
+        "wer": 0.236
+      },
+      {
+        "file_id": "day1_consultation12",
+        "wer": 0.2155
+      },
+      {
+        "file_id": "day1_consultation13",
+        "wer": 0.1653
+      },
+      {
+        "file_id": "day1_consultation14",
+        "wer": 0.2339
+      },
+      {
+        "file_id": "day1_consultation15",
+        "wer": 0.2258
+      },
+      {
+        "file_id": "day2_consultation01",
+        "wer": 0.2294
+      },
+      {
+        "file_id": "day2_consultation02",
+        "wer": 0.2255
+      },
+      {
+        "file_id": "day2_consultation03",
+        "wer": 0.2466
+      },
+      {
+        "file_id": "day2_consultation04",
+        "wer": 0.2016
+      },
+      {
+        "file_id": "day2_consultation05",
+        "wer": 0.1862
+      },
+      {
+        "file_id": "day2_consultation06",
+        "wer": 0.226
+      },
+      {
+        "file_id": "day2_consultation07",
+        "wer": 0.2401
+      },
+      {
+        "file_id": "day2_consultation08",
+        "wer": 0.2027
+      },
+      {
+        "file_id": "day2_consultation09",
+        "wer": 0.2069
+      },
+      {
+        "file_id": "day2_consultation10",
+        "wer": 0.1781
+      },
+      {
+        "file_id": "day3_consultation01",
+        "wer": 0.1997
+      },
+      {
+        "file_id": "day3_consultation02",
+        "wer": 0.219
+      },
+      {
+        "file_id": "day3_consultation03",
+        "wer": 0.2491
+      },
+      {
+        "file_id": "day3_consultation04",
+        "wer": 0.2509
+      },
+      {
+        "file_id": "day3_consultation05",
+        "wer": 0.2132
+      },
+      {
+        "file_id": "day3_consultation06",
+        "wer": 0.2145
+      },
+      {
+        "file_id": "day3_consultation07",
+        "wer": 0.2557
+      },
+      {
+        "file_id": "day3_consultation08",
+        "wer": 0.2429
+      },
+      {
+        "file_id": "day3_consultation09",
+        "wer": 0.1977
+      },
+      {
+        "file_id": "day3_consultation10",
+        "wer": 0.1823
+      },
+      {
+        "file_id": "day4_consultation01",
+        "wer": 0.2025
+      },
+      {
+        "file_id": "day4_consultation02",
+        "wer": 0.1608
+      },
+      {
+        "file_id": "day4_consultation03",
+        "wer": 0.1779
+      },
+      {
+        "file_id": "day4_consultation04",
+        "wer": 0.1733
+      },
+      {
+        "file_id": "day4_consultation05",
+        "wer": 0.2404
+      },
+      {
+        "file_id": "day4_consultation06",
+        "wer": 0.1988
+      },
+      {
+        "file_id": "day4_consultation07",
+        "wer": 0.1868
+      },
+      {
+        "file_id": "day4_consultation08",
+        "wer": 0.1969
+      },
+      {
+        "file_id": "day4_consultation09",
+        "wer": 0.1949
+      },
+      {
+        "file_id": "day4_consultation10",
+        "wer": 0.1989
+      },
+      {
+        "file_id": "day5_consultation01",
+        "wer": 0.1924
+      },
+      {
+        "file_id": "day5_consultation02",
+        "wer": 0.1414
+      },
+      {
+        "file_id": "day5_consultation03",
+        "wer": 0.1917
+      },
+      {
+        "file_id": "day5_consultation04",
+        "wer": 0.2593
+      },
+      {
+        "file_id": "day5_consultation05",
+        "wer": 0.2009
+      },
+      {
+        "file_id": "day5_consultation06",
+        "wer": 0.2071
+      },
+      {
+        "file_id": "day5_consultation07",
+        "wer": 0.1985
+      },
+      {
+        "file_id": "day5_consultation08",
+        "wer": 0.133
+      },
+      {
+        "file_id": "day5_consultation09",
+        "wer": 0.2075
+      },
+      {
+        "file_id": "day5_consultation10",
+        "wer": 0.1673
+      },
+      {
+        "file_id": "day5_consultation11",
+        "wer": 0.161
+      },
+      {
+        "file_id": "day5_consultation12",
+        "wer": 0.1512
+      }
+    ],
+    "confidence": [
+      {
+        "file_id": "day1_consultation01",
+        "wer": 0.1968
+      },
+      {
+        "file_id": "day1_consultation02",
+        "wer": 0.2972
+      },
+      {
+        "file_id": "day1_consultation03",
+        "wer": 0.2191
+      },
+      {
+        "file_id": "day1_consultation04",
+        "wer": 0.2592
+      },
+      {
+        "file_id": "day1_consultation05",
+        "wer": 0.2347
+      },
+      {
+        "file_id": "day1_consultation06",
+        "wer": 0.2561
+      },
+      {
+        "file_id": "day1_consultation07",
+        "wer": 0.2921
+      },
+      {
+        "file_id": "day1_consultation08",
+        "wer": 0.2261
+      },
+      {
+        "file_id": "day1_consultation09",
+        "wer": 0.2281
+      },
+      {
+        "file_id": "day1_consultation10",
+        "wer": 0.2613
+      },
+      {
+        "file_id": "day1_consultation11",
+        "wer": 0.236
+      },
+      {
+        "file_id": "day1_consultation12",
+        "wer": 0.2138
+      },
+      {
+        "file_id": "day1_consultation13",
+        "wer": 0.1671
+      },
+      {
+        "file_id": "day1_consultation14",
+        "wer": 0.2344
+      },
+      {
+        "file_id": "day1_consultation15",
+        "wer": 0.229
+      },
+      {
+        "file_id": "day2_consultation01",
+        "wer": 0.2259
+      },
+      {
+        "file_id": "day2_consultation02",
+        "wer": 0.2285
+      },
+      {
+        "file_id": "day2_consultation03",
+        "wer": 0.2445
+      },
+      {
+        "file_id": "day2_consultation04",
+        "wer": 0.2022
+      },
+      {
+        "file_id": "day2_consultation05",
+        "wer": 0.1841
+      },
+      {
+        "file_id": "day2_consultation06",
+        "wer": 0.225
+      },
+      {
+        "file_id": "day2_consultation07",
+        "wer": 0.2408
+      },
+      {
+        "file_id": "day2_consultation08",
+        "wer": 0.2038
+      },
+      {
+        "file_id": "day2_consultation09",
+        "wer": 0.2069
+      },
+      {
+        "file_id": "day2_consultation10",
+        "wer": 0.1759
+      },
+      {
+        "file_id": "day3_consultation01",
+        "wer": 0.202
+      },
+      {
+        "file_id": "day3_consultation02",
+        "wer": 0.2199
+      },
+      {
+        "file_id": "day3_consultation03",
+        "wer": 0.248
+      },
+      {
+        "file_id": "day3_consultation04",
+        "wer": 0.2536
+      },
+      {
+        "file_id": "day3_consultation05",
+        "wer": 0.2141
+      },
+      {
+        "file_id": "day3_consultation06",
+        "wer": 0.2162
+      },
+      {
+        "file_id": "day3_consultation07",
+        "wer": 0.2591
+      },
+      {
+        "file_id": "day3_consultation08",
+        "wer": 0.244
+      },
+      {
+        "file_id": "day3_consultation09",
+        "wer": 0.1977
+      },
+      {
+        "file_id": "day3_consultation10",
+        "wer": 0.186
+      },
+      {
+        "file_id": "day4_consultation01",
+        "wer": 0.2009
+      },
+      {
+        "file_id": "day4_consultation02",
+        "wer": 0.1608
+      },
+      {
+        "file_id": "day4_consultation03",
+        "wer": 0.1779
+      },
+      {
+        "file_id": "day4_consultation04",
+        "wer": 0.1753
+      },
+      {
+        "file_id": "day4_consultation05",
+        "wer": 0.2404
+      },
+      {
+        "file_id": "day4_consultation06",
+        "wer": 0.1994
+      },
+      {
+        "file_id": "day4_consultation07",
+        "wer": 0.1891
+      },
+      {
+        "file_id": "day4_consultation08",
+        "wer": 0.1981
+      },
+      {
+        "file_id": "day4_consultation09",
+        "wer": 0.2014
+      },
+      {
+        "file_id": "day4_consultation10",
+        "wer": 0.2013
+      },
+      {
+        "file_id": "day5_consultation01",
+        "wer": 0.1989
+      },
+      {
+        "file_id": "day5_consultation02",
+        "wer": 0.1442
+      },
+      {
+        "file_id": "day5_consultation03",
+        "wer": 0.1929
+      },
+      {
+        "file_id": "day5_consultation04",
+        "wer": 0.2616
+      },
+      {
+        "file_id": "day5_consultation05",
+        "wer": 0.202
+      },
+      {
+        "file_id": "day5_consultation06",
+        "wer": 0.2071
+      },
+      {
+        "file_id": "day5_consultation07",
+        "wer": 0.1994
+      },
+      {
+        "file_id": "day5_consultation08",
+        "wer": 0.1338
+      },
+      {
+        "file_id": "day5_consultation09",
+        "wer": 0.2097
+      },
+      {
+        "file_id": "day5_consultation10",
+        "wer": 0.1719
+      },
+      {
+        "file_id": "day5_consultation11",
+        "wer": 0.163
+      },
+      {
+        "file_id": "day5_consultation12",
+        "wer": 0.1499
+      }
+    ],
+    "entropy": [
+      {
+        "file_id": "day1_consultation01",
+        "wer": 0.1982
+      },
+      {
+        "file_id": "day1_consultation02",
+        "wer": 0.2961
+      },
+      {
+        "file_id": "day1_consultation03",
+        "wer": 0.2191
+      },
+      {
+        "file_id": "day1_consultation04",
+        "wer": 0.2586
+      },
+      {
+        "file_id": "day1_consultation05",
+        "wer": 0.2341
+      },
+      {
+        "file_id": "day1_consultation06",
+        "wer": 0.2551
+      },
+      {
+        "file_id": "day1_consultation07",
+        "wer": 0.291
+      },
+      {
+        "file_id": "day1_consultation08",
+        "wer": 0.227
+      },
+      {
+        "file_id": "day1_consultation09",
+        "wer": 0.2275
+      },
+      {
+        "file_id": "day1_consultation10",
+        "wer": 0.2613
+      },
+      {
+        "file_id": "day1_consultation11",
+        "wer": 0.236
+      },
+      {
+        "file_id": "day1_consultation12",
+        "wer": 0.2138
+      },
+      {
+        "file_id": "day1_consultation13",
+        "wer": 0.1671
+      },
+      {
+        "file_id": "day1_consultation14",
+        "wer": 0.2334
+      },
+      {
+        "file_id": "day1_consultation15",
+        "wer": 0.2298
+      },
+      {
+        "file_id": "day2_consultation01",
+        "wer": 0.2259
+      },
+      {
+        "file_id": "day2_consultation02",
+        "wer": 0.2279
+      },
+      {
+        "file_id": "day2_consultation03",
+        "wer": 0.2438
+      },
+      {
+        "file_id": "day2_consultation04",
+        "wer": 0.2022
+      },
+      {
+        "file_id": "day2_consultation05",
+        "wer": 0.1841
+      },
+      {
+        "file_id": "day2_consultation06",
+        "wer": 0.2245
+      },
+      {
+        "file_id": "day2_consultation07",
+        "wer": 0.2408
+      },
+      {
+        "file_id": "day2_consultation08",
+        "wer": 0.2038
+      },
+      {
+        "file_id": "day2_consultation09",
+        "wer": 0.2059
+      },
+      {
+        "file_id": "day2_consultation10",
+        "wer": 0.1764
+      },
+      {
+        "file_id": "day3_consultation01",
+        "wer": 0.202
+      },
+      {
+        "file_id": "day3_consultation02",
+        "wer": 0.2199
+      },
+      {
+        "file_id": "day3_consultation03",
+        "wer": 0.248
+      },
+      {
+        "file_id": "day3_consultation04",
+        "wer": 0.2527
+      },
+      {
+        "file_id": "day3_consultation05",
+        "wer": 0.2141
+      },
+      {
+        "file_id": "day3_consultation06",
+        "wer": 0.2162
+      },
+      {
+        "file_id": "day3_consultation07",
+        "wer": 0.2574
+      },
+      {
+        "file_id": "day3_consultation08",
+        "wer": 0.244
+      },
+      {
+        "file_id": "day3_consultation09",
+        "wer": 0.1977
+      },
+      {
+        "file_id": "day3_consultation10",
+        "wer": 0.186
+      },
+      {
+        "file_id": "day4_consultation01",
+        "wer": 0.2002
+      },
+      {
+        "file_id": "day4_consultation02",
+        "wer": 0.16
+      },
+      {
+        "file_id": "day4_consultation03",
+        "wer": 0.1779
+      },
+      {
+        "file_id": "day4_consultation04",
+        "wer": 0.1753
+      },
+      {
+        "file_id": "day4_consultation05",
+        "wer": 0.2404
+      },
+      {
+        "file_id": "day4_consultation06",
+        "wer": 0.1982
+      },
+      {
+        "file_id": "day4_consultation07",
+        "wer": 0.1885
+      },
+      {
+        "file_id": "day4_consultation08",
+        "wer": 0.1981
+      },
+      {
+        "file_id": "day4_consultation09",
+        "wer": 0.2014
+      },
+      {
+        "file_id": "day4_consultation10",
+        "wer": 0.2019
+      },
+      {
+        "file_id": "day5_consultation01",
+        "wer": 0.1989
+      },
+      {
+        "file_id": "day5_consultation02",
+        "wer": 0.1442
+      },
+      {
+        "file_id": "day5_consultation03",
+        "wer": 0.1933
+      },
+      {
+        "file_id": "day5_consultation04",
+        "wer": 0.2616
+      },
+      {
+        "file_id": "day5_consultation05",
+        "wer": 0.202
+      },
+      {
+        "file_id": "day5_consultation06",
+        "wer": 0.2077
+      },
+      {
+        "file_id": "day5_consultation07",
+        "wer": 0.2002
+      },
+      {
+        "file_id": "day5_consultation08",
+        "wer": 0.1338
+      },
+      {
+        "file_id": "day5_consultation09",
+        "wer": 0.2111
+      },
+      {
+        "file_id": "day5_consultation10",
+        "wer": 0.1712
+      },
+      {
+        "file_id": "day5_consultation11",
+        "wer": 0.162
+      },
+      {
+        "file_id": "day5_consultation12",
+        "wer": 0.1499
+      }
+    ],
+    "m1_only": [
+      {
+        "file_id": "day1_consultation01",
+        "wer": 0.1426
+      },
+      {
+        "file_id": "day1_consultation02",
+        "wer": 0.1525
+      },
+      {
+        "file_id": "day1_consultation03",
+        "wer": 0.1499
+      },
+      {
+        "file_id": "day1_consultation04",
+        "wer": 0.1884
+      },
+      {
+        "file_id": "day1_consultation05",
+        "wer": 0.1305
+      },
+      {
+        "file_id": "day1_consultation06",
+        "wer": 0.1808
+      },
+      {
+        "file_id": "day1_consultation07",
+        "wer": 0.2227
+      },
+      {
+        "file_id": "day1_consultation08",
+        "wer": 0.1479
+      },
+      {
+        "file_id": "day1_consultation09",
+        "wer": 0.1754
+      },
+      {
+        "file_id": "day1_consultation10",
+        "wer": 0.1848
+      },
+      {
+        "file_id": "day1_consultation11",
+        "wer": 0.1617
+      },
+      {
+        "file_id": "day1_consultation12",
+        "wer": 0.1518
+      },
+      {
+        "file_id": "day1_consultation13",
+        "wer": 0.1019
+      },
+      {
+        "file_id": "day1_consultation14",
+        "wer": 0.1568
+      },
+      {
+        "file_id": "day1_consultation15",
+        "wer": 0.1624
+      },
+      {
+        "file_id": "day2_consultation01",
+        "wer": 0.1426
+      },
+      {
+        "file_id": "day2_consultation02",
+        "wer": 0.1507
+      },
+      {
+        "file_id": "day2_consultation03",
+        "wer": 0.1795
+      },
+      {
+        "file_id": "day2_consultation04",
+        "wer": 0.1293
+      },
+      {
+        "file_id": "day2_consultation05",
+        "wer": 0.0975
+      },
+      {
+        "file_id": "day2_consultation06",
+        "wer": 0.1326
+      },
+      {
+        "file_id": "day2_consultation07",
+        "wer": 0.1697
+      },
+      {
+        "file_id": "day2_consultation08",
+        "wer": 0.1213
+      },
+      {
+        "file_id": "day2_consultation09",
+        "wer": 0.136
+      },
+      {
+        "file_id": "day2_consultation10",
+        "wer": 0.1022
+      },
+      {
+        "file_id": "day3_consultation01",
+        "wer": 0.1504
+      },
+      {
+        "file_id": "day3_consultation02",
+        "wer": 0.139
+      },
+      {
+        "file_id": "day3_consultation03",
+        "wer": 0.157
+      },
+      {
+        "file_id": "day3_consultation04",
+        "wer": 0.1592
+      },
+      {
+        "file_id": "day3_consultation05",
+        "wer": 0.1374
+      },
+      {
+        "file_id": "day3_consultation06",
+        "wer": 0.1334
+      },
+      {
+        "file_id": "day3_consultation07",
+        "wer": 0.1614
+      },
+      {
+        "file_id": "day3_consultation08",
+        "wer": 0.1536
+      },
+      {
+        "file_id": "day3_consultation09",
+        "wer": 0.0934
+      },
+      {
+        "file_id": "day3_consultation10",
+        "wer": 0.0959
+      },
+      {
+        "file_id": "day4_consultation01",
+        "wer": 0.1193
+      },
+      {
+        "file_id": "day4_consultation02",
+        "wer": 0.1013
+      },
+      {
+        "file_id": "day4_consultation03",
+        "wer": 0.086
+      },
+      {
+        "file_id": "day4_consultation04",
+        "wer": 0.0952
+      },
+      {
+        "file_id": "day4_consultation05",
+        "wer": 0.1688
+      },
+      {
+        "file_id": "day4_consultation06",
+        "wer": 0.1103
+      },
+      {
+        "file_id": "day4_consultation07",
+        "wer": 0.1307
+      },
+      {
+        "file_id": "day4_consultation08",
+        "wer": 0.1413
+      },
+      {
+        "file_id": "day4_consultation09",
+        "wer": 0.1319
+      },
+      {
+        "file_id": "day4_consultation10",
+        "wer": 0.1198
+      },
+      {
+        "file_id": "day5_consultation01",
+        "wer": 0.1135
+      },
+      {
+        "file_id": "day5_consultation02",
+        "wer": 0.097
+      },
+      {
+        "file_id": "day5_consultation03",
+        "wer": 0.0961
+      },
+      {
+        "file_id": "day5_consultation04",
+        "wer": 0.197
+      },
+      {
+        "file_id": "day5_consultation05",
+        "wer": 0.141
+      },
+      {
+        "file_id": "day5_consultation06",
+        "wer": 0.1306
+      },
+      {
+        "file_id": "day5_consultation07",
+        "wer": 0.1183
+      },
+      {
+        "file_id": "day5_consultation08",
+        "wer": 0.0921
+      },
+      {
+        "file_id": "day5_consultation09",
+        "wer": 0.1254
+      },
+      {
+        "file_id": "day5_consultation10",
+        "wer": 0.1141
+      },
+      {
+        "file_id": "day5_consultation11",
+        "wer": 0.088
+      },
+      {
+        "file_id": "day5_consultation12",
+        "wer": 0.1017
+      }
+    ],
+    "m2_only": [
+      {
+        "file_id": "day1_consultation01",
+        "wer": 0.1653
+      },
+      {
+        "file_id": "day1_consultation02",
+        "wer": 0.2297
+      },
+      {
+        "file_id": "day1_consultation03",
+        "wer": 0.1627
+      },
+      {
+        "file_id": "day1_consultation04",
+        "wer": 0.1908
+      },
+      {
+        "file_id": "day1_consultation05",
+        "wer": 0.1642
+      },
+      {
+        "file_id": "day1_consultation06",
+        "wer": 0.1912
+      },
+      {
+        "file_id": "day1_consultation07",
+        "wer": 0.2006
+      },
+      {
+        "file_id": "day1_consultation08",
+        "wer": 0.1883
+      },
+      {
+        "file_id": "day1_consultation09",
+        "wer": 0.1735
+      },
+      {
+        "file_id": "day1_consultation10",
+        "wer": 0.2058
+      },
+      {
+        "file_id": "day1_consultation11",
+        "wer": 0.1543
+      },
+      {
+        "file_id": "day1_consultation12",
+        "wer": 0.1553
+      },
+      {
+        "file_id": "day1_consultation13",
+        "wer": 0.1143
+      },
+      {
+        "file_id": "day1_consultation14",
+        "wer": 0.1769
+      },
+      {
+        "file_id": "day1_consultation15",
+        "wer": 0.1767
+      },
+      {
+        "file_id": "day2_consultation01",
+        "wer": 0.1495
+      },
+      {
+        "file_id": "day2_consultation02",
+        "wer": 0.1519
+      },
+      {
+        "file_id": "day2_consultation03",
+        "wer": 0.2205
+      },
+      {
+        "file_id": "day2_consultation04",
+        "wer": 0.1474
+      },
+      {
+        "file_id": "day2_consultation05",
+        "wer": 0.1101
+      },
+      {
+        "file_id": "day2_consultation06",
+        "wer": 0.1398
+      },
+      {
+        "file_id": "day2_consultation07",
+        "wer": 0.1728
+      },
+      {
+        "file_id": "day2_consultation08",
+        "wer": 0.1318
+      },
+      {
+        "file_id": "day2_consultation09",
+        "wer": 0.1458
+      },
+      {
+        "file_id": "day2_consultation10",
+        "wer": 0.1234
+      },
+      {
+        "file_id": "day3_consultation01",
+        "wer": 0.159
+      },
+      {
+        "file_id": "day3_consultation02",
+        "wer": 0.1653
+      },
+      {
+        "file_id": "day3_consultation03",
+        "wer": 0.1548
+      },
+      {
+        "file_id": "day3_consultation04",
+        "wer": 0.1754
+      },
+      {
+        "file_id": "day3_consultation05",
+        "wer": 0.1258
+      },
+      {
+        "file_id": "day3_consultation06",
+        "wer": 0.1503
+      },
+      {
+        "file_id": "day3_consultation07",
+        "wer": 0.1784
+      },
+      {
+        "file_id": "day3_consultation08",
+        "wer": 0.1754
+      },
+      {
+        "file_id": "day3_consultation09",
+        "wer": 0.1033
+      },
+      {
+        "file_id": "day3_consultation10",
+        "wer": 0.1048
+      },
+      {
+        "file_id": "day4_consultation01",
+        "wer": 0.1413
+      },
+      {
+        "file_id": "day4_consultation02",
+        "wer": 0.1133
+      },
+      {
+        "file_id": "day4_consultation03",
+        "wer": 0.0948
+      },
+      {
+        "file_id": "day4_consultation04",
+        "wer": 0.1084
+      },
+      {
+        "file_id": "day4_consultation05",
+        "wer": 0.1656
+      },
+      {
+        "file_id": "day4_consultation06",
+        "wer": 0.1388
+      },
+      {
+        "file_id": "day4_consultation07",
+        "wer": 0.1519
+      },
+      {
+        "file_id": "day4_consultation08",
+        "wer": 0.1484
+      },
+      {
+        "file_id": "day4_consultation09",
+        "wer": 0.1584
+      },
+      {
+        "file_id": "day4_consultation10",
+        "wer": 0.1282
+      },
+      {
+        "file_id": "day5_consultation01",
+        "wer": 0.1481
+      },
+      {
+        "file_id": "day5_consultation02",
+        "wer": 0.1044
+      },
+      {
+        "file_id": "day5_consultation03",
+        "wer": 0.1009
+      },
+      {
+        "file_id": "day5_consultation04",
+        "wer": 0.2277
+      },
+      {
+        "file_id": "day5_consultation05",
+        "wer": 0.1698
+      },
+      {
+        "file_id": "day5_consultation06",
+        "wer": 0.162
+      },
+      {
+        "file_id": "day5_consultation07",
+        "wer": 0.1467
+      },
+      {
+        "file_id": "day5_consultation08",
+        "wer": 0.1086
+      },
+      {
+        "file_id": "day5_consultation09",
+        "wer": 0.1804
+      },
+      {
+        "file_id": "day5_consultation10",
+        "wer": 0.1511
+      },
+      {
+        "file_id": "day5_consultation11",
+        "wer": 0.098
+      },
+      {
+        "file_id": "day5_consultation12",
+        "wer": 0.1042
+      }
+    ]
+  }
+}
