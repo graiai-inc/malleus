@@ -6,6 +6,6 @@
   "dataset": "primock57",
   "n_files": 57,
   "aggregate_pivot_wer_pct": 13.76,
-  "aggregate_cnc_wer_pct": 13.8,
-  "delta_pp": 0.04
+  "aggregate_cnc_wer_pct": 13.16,
+  "delta_pp": -0.6
 }

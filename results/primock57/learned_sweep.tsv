@@ -1,0 +1,5 @@
+mode	drop_thr	eps_del	eps_ins	wer	delta
+hybrid	0.10	0.60	0.70	13.14	-0.63
+hybrid	0.20	0.60	0.70	13.15	-0.62
+hybrid	0.30	0.60	0.70	13.16	-0.61
+hybrid	0.40	0.60	0.70	13.43	-0.34

@@ -6,47 +6,47 @@
   "aggregate_wer": {
     "m1_only": 13.76,
     "m2_only": 15.27,
-    "naive": 21.37,
-    "confidence": 21.28,
-    "shannon": 21.22,
-    "tsallis": 21.37,
-    "margin": 21.29,
-    "asymmetric": 21.85,
+    "naive": 13.41,
+    "confidence": 13.36,
+    "shannon": 13.3,
+    "tsallis": 13.41,
+    "margin": 13.39,
+    "asymmetric": 14.02,
     "oracle": 9.07
   },
-  "n_files_fusion_helps": 0,
+  "n_files_fusion_helps": 43,
   "best_fusion_name_counts": {
-    "naive": 0,
-    "confidence": 0,
-    "shannon": 0,
+    "naive": 10,
+    "confidence": 13,
+    "shannon": 13,
     "tsallis": 0,
-    "margin": 0,
-    "asymmetric": 0
+    "margin": 6,
+    "asymmetric": 1
   },
   "gate_analysis": {
     "disagreement": {
       "threshold": 0.1854,
-      "gated_wer": 13.74
+      "gated_wer": 13.64
     },
     "conf_gap": {
       "threshold": 0.066,
-      "gated_wer": 13.82
+      "gated_wer": 13.65
     },
     "logprob_mean_m1": {
       "threshold": -0.0267,
-      "gated_wer": 13.75
+      "gated_wer": 13.66
     },
     "logprob_mean_m2": {
       "threshold": -0.058,
-      "gated_wer": 13.75
+      "gated_wer": 13.66
     },
     "shannon_mean_m1": {
       "threshold": 0.1487,
-      "gated_wer": 13.94
+      "gated_wer": 13.59
     },
     "shannon_mean_m2": {
       "threshold": 0.4332,
-      "gated_wer": 13.82
+      "gated_wer": 13.65
     }
   },
   "notes": "Per-file results in rover_v2_<m1>_+_<m2>.jsonl. Gate CSV in rover_v2_gate_<m1>_+_<m2>.csv. gate_analysis shows the best single-signal threshold: if signal >= threshold, use best fusion, else use best solo. gated_wer is the resulting corpus WER under that oracle-of-methods policy."

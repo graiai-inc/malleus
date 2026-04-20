@@ -187,12 +187,28 @@ class Slot:
         return None if w == EPS else w
 
 
-def build_cnc(hyps: list[list[dict]]) -> list[Slot]:
+def build_cnc(
+    hyps: list[list[dict]],
+    eps_del_scale: float = 1.0,
+    eps_ins_scale: float = 1.0,
+) -> list[Slot]:
     """Build a confusion network by progressive pivot alignment.
 
     hyps[0] is the pivot (used as the initial slot sequence).
-    Each hyps[k] is a list of dicts from words_with_confidence(), each
-    containing at minimum {'word': str, 'top1_mean': float}.
+
+    Two ε knobs because the two uses of silence pull in opposite directions:
+
+    eps_del_scale
+        Weight of non-pivot silence voted AT an existing slot (the non-pivot
+        deleted a word the pivot has). High → aggressive insertion removal
+        (whisper silence kicks out parakeet spurious words). Risky if the
+        pivot was actually right.
+
+    eps_ins_scale
+        Weight of pivot silence voted AT a new slot created by a non-pivot
+        (the non-pivot inserted a word the pivot missed). Low → aggressive
+        deletion recovery (whisper word fills parakeet gap). Risky if the
+        non-pivot was hallucinating.
     """
     if not hyps or not hyps[0]:
         return []
@@ -205,8 +221,8 @@ def build_cnc(hyps: list[list[dict]]) -> list[Slot]:
         s.n_systems_voted = 1
         slots.append(s)
 
-    # Mean top-1 of each system (used as ε vote weight).
-    eps_weights = [
+    # Unscaled mean top-1 per system; scales applied at vote time.
+    sys_mean = [
         sum(d['top1_mean'] for d in wds) / len(wds) if wds else 0.5
         for wds in hyps
     ]
@@ -216,7 +232,8 @@ def build_cnc(hyps: list[list[dict]]) -> list[Slot]:
         new_hyp = hyps[k]
         new_words = [d['word'] for d in new_hyp]
         new_confs = [d['top1_mean'] for d in new_hyp]
-        eps_w = eps_weights[k]
+        # Non-pivot silence voted at an existing slot (insertion-removal ε).
+        eps_del = sys_mean[k] * eps_del_scale
 
         slot_heads = [s.head() for s in slots]
         path = align_to_slots(slot_heads, new_words)
@@ -243,18 +260,18 @@ def build_cnc(hyps: list[list[dict]]) -> list[Slot]:
                     new_slots.append(slots[i_consumed])
                     i_consumed += 1
                 s = slots[slot_i]
-                s.vote(EPS, eps_w)
+                s.vote(EPS, eps_del)
                 s.n_systems_voted += 1
                 new_slots.append(s)
                 i_consumed = slot_i + 1
             else:
-                # Insertion by new system: create a new slot here.
+                # Insertion by new system: create a new slot here. All
+                # previously-voted systems (incl. pivot) effectively voted
+                # silence here — use the deletion-recovery ε scale.
                 new_slot = Slot()
                 new_slot.vote(new_words[hyp_j], new_confs[hyp_j])
-                # All previously-voted systems effectively voted ε here.
-                # Give them their ε weight.
                 for m in range(k):
-                    new_slot.vote(EPS, eps_weights[m])
+                    new_slot.vote(EPS, sys_mean[m] * eps_ins_scale)
                 new_slot.n_systems_voted = k + 1
                 new_slots.append(new_slot)
         # Append any trailing slots that weren't consumed.
@@ -294,6 +311,12 @@ def main():
     parser.add_argument('--models', required=True,
                         help='Comma-separated list, first is pivot')
     parser.add_argument('--dataset', required=True)
+    parser.add_argument('--eps-del-scale', type=float, default=1.0,
+                        help='Scale for non-pivot silence at existing slot '
+                        '(insertion-removal ε; higher = more aggressive)')
+    parser.add_argument('--eps-ins-scale', type=float, default=1.0,
+                        help='Scale for pivot silence at new non-pivot slot '
+                        '(deletion-recovery ε; lower = more aggressive)')
     args = parser.parse_args()
 
     model_names = [m.strip() for m in args.models.split(',')]
@@ -308,8 +331,12 @@ def main():
 
     out_dir = MALLEUS_DIR / 'results' / args.dataset
     tag = '_+_'.join(model_names)
-    per_file_path = out_dir / f'cnc_{tag}.jsonl'
-    summary_path = out_dir / f'cnc_{tag}.json'
+    scale_tag = (
+        '' if (args.eps_del_scale == 1.0 and args.eps_ins_scale == 1.0)
+        else f'_d{args.eps_del_scale:.2f}_i{args.eps_ins_scale:.2f}'
+    )
+    per_file_path = out_dir / f'cnc_{tag}{scale_tag}.jsonl'
+    summary_path = out_dir / f'cnc_{tag}{scale_tag}.json'
     per_file_path.unlink(missing_ok=True)
     fh = open(per_file_path, 'w')
 
@@ -329,7 +356,11 @@ def main():
             log.warning(f'{fid}: empty hypothesis from one of the models, skipping')
             continue
 
-        slots = build_cnc(wds)
+        slots = build_cnc(
+            wds,
+            eps_del_scale=args.eps_del_scale,
+            eps_ins_scale=args.eps_ins_scale,
+        )
         cnc_hyp = decode_cn(slots)
         pivot_hyp = recs[0]['hypothesis']
         ref = recs[0]['reference']
@@ -339,7 +370,7 @@ def main():
         if n_words == 0:
             continue
 
-        cnc_wer = jiwer.wer(ref_n, cnc_hyp)
+        cnc_wer = jiwer.wer(ref_n, WNORM(cnc_hyp))
         pivot_wer = jiwer.wer(ref_n, WNORM(pivot_hyp))
 
         totals['cnc_errors'] += round(cnc_wer * n_words)

@@ -92,7 +92,9 @@ def words_with_confidence(tokens: list[str],
     out = []
     for raw, idxs in groups:
         # Normalize identically to tokenize(): lowercase, strip non-word chars.
-        norm = re.sub(r'[^\w\s]', '', raw.lower()).strip()
+        # Keep apostrophes so WNORM can expand contractions ("i'm" -> "i am");
+        # otherwise CNC/ROVER outputs diverge from WNORM'd references.
+        norm = re.sub(r"[^\w\s']", '', raw.lower()).strip(" ")
         if not norm:
             continue
 
